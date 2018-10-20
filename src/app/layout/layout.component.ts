@@ -10,7 +10,7 @@ import { homeRoutes } from '../home/home-routing.module';
   styleUrls: ['./layout.component.scss'],
 })
 export class LayoutComponent {
-  homeRoutes = homeRoutes;
+  homeRoutes: any[] = homeRoutes;
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
       map(result => result.matches)

@@ -1,3 +1,5 @@
+@import '../../theme.scss';
+
 .sidenav-container {
   height: 100%;
 }
@@ -14,4 +16,15 @@
   position: sticky;
   top: 0;
   z-index: 1;
+}
+
+.mat-list-item {
+  text-transform: capitalize;
+  transition: color .2s ease;
+  .mat-icon {
+    margin-right: 12px;
+  }
+  &.active:not(#priority) {
+    color: mat-color(map-get($theme, accent));
+  }
 }

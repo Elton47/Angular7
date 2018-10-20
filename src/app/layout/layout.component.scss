@@ -18,13 +18,13 @@
   z-index: 1;
 }
 
-.mat-list-item {
+.mat-nav-list .mat-list-item {
   text-transform: capitalize;
   transition: color .2s ease;
   .mat-icon {
     margin-right: 12px;
   }
-  &.active:not(#priority) {
+  &.active {
     color: mat-color(map-get($theme, accent));
   }
 }

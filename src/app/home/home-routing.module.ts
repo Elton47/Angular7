@@ -15,7 +15,7 @@ const routes: Routes = [
       {
         path: 'dashboard',
         component: DashboardComponent,
-        data: { icon: 'dashboard' }
+        data: { icon: 'insert_chart_outlined' }
       },
       {
         path: 'favourites',

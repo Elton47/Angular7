@@ -9,12 +9,16 @@ import { environment } from '../environments/environment';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatProgressSpinnerModule, MatSpinner } from '@angular/material';
 import { FormsModule } from '@angular/forms';
+import { CoreModule } from './core/core.module';
+import { LayoutModule } from '@angular/cdk/layout';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     FormsModule,
     HttpClientModule,
@@ -23,7 +27,9 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     BrowserAnimationsModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    CoreModule,
+    LayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent],

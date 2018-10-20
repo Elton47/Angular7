@@ -69,7 +69,10 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
-              "serviceWorker": true
+              "serviceWorker": true,
+              "lazyModules": [
+                "src/app/home/home.module"
+              ]
             }
           }
         },

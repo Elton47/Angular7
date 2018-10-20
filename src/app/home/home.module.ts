@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeRoutingModule } from './home-routing.module';
-import { MatButtonModule, MatIconModule, MatGridListModule, MatCardModule, MatMenuModule } from '@angular/material';
+import { MatButtonModule, MatIconModule, MatGridListModule, MatCardModule, MatMenuModule, MatTableModule, MatPaginatorModule, MatSortModule } from '@angular/material';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LayoutModule } from '@angular/cdk/layout';
+import { FavouritesComponent } from './favourites/favourites.component';
 
 @NgModule({
   imports: [
@@ -14,10 +15,14 @@ import { LayoutModule } from '@angular/cdk/layout';
     MatMenuModule,
     MatIconModule,
     MatButtonModule,
-    LayoutModule
+    LayoutModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
   declarations: [
-    DashboardComponent
+    DashboardComponent,
+    FavouritesComponent
   ]
 })
 export class HomeModule { }

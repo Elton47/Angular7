@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { FavouritesComponent } from './favourites/favourites.component';
 
 const routes: Routes = [
   {
@@ -13,7 +14,13 @@ const routes: Routes = [
       },
       {
         path: 'dashboard',
-        component: DashboardComponent
+        component: DashboardComponent,
+        data: { icon: 'dashboard' }
+      },
+      {
+        path: 'favourites',
+        component: FavouritesComponent,
+        data: { icon: 'favorite_border' }
       }
     ]
   }

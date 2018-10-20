@@ -10,8 +10,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatProgressSpinnerModule, MatSpinner } from '@angular/material';
 import { FormsModule } from '@angular/forms';
 import { CoreModule } from './core/core.module';
-import { LayoutModule } from '@angular/cdk/layout';
 import { CommonModule } from '@angular/common';
+import { AppLayoutModule } from './layout/layout.module';
 
 @NgModule({
   declarations: [
@@ -29,7 +29,7 @@ import { CommonModule } from '@angular/common';
     BrowserAnimationsModule,
     MatProgressSpinnerModule,
     CoreModule,
-    LayoutModule
+    AppLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent],

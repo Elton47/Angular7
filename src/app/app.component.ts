@@ -1,10 +1,14 @@
 import { Component } from '@angular/core';
+import { MatSpinner } from '@angular/material';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  template: `
+    <router-outlet></router-outlet>
+    <ng-http-loader [entryComponent]="matSpinner"></ng-http-loader>
+  `,
+  styles: [``]
 })
 export class AppComponent {
-  title = 'app';
+  public matSpinner = MatSpinner;
 }

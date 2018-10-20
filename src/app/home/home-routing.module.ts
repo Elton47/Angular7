@@ -1,11 +1,21 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { LayoutComponent } from '../layout/layout.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: LayoutComponent
+    children: [
+      {
+        path: '',
+        pathMatch: 'full',
+        redirectTo: 'dashboard'
+      },
+      {
+        path: 'dashboard',
+        component: DashboardComponent
+      }
+    ]
   }
 ];
 
@@ -14,3 +24,5 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class HomeRoutingModule { }
+
+export const homeRoutes = routes[0].children.filter(route => route.path);

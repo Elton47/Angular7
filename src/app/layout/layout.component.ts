@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { homeRoutes } from '../home/home-routing.module';
 
 @Component({
   selector: 'app-layout',
@@ -9,7 +10,7 @@ import { map } from 'rxjs/operators';
   styleUrls: ['./layout.component.scss'],
 })
 export class LayoutComponent {
-
+  homeRoutes = homeRoutes;
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
       map(result => result.matches)
